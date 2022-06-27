@@ -1,0 +1,277 @@
+/*google Fonts*/
+/*Letra general de los parrafos- declarada $parrafo-general*/
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+/*letra River de la primer seccion*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@200&display=swap");
+/*Letra h3 de primera seccion - Salones -*/
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&display=swap");
+/*Letra h4 segunda seccion*/
+@import url("https://fonts.googleapis.com/css2?family=Thasadith&display=swap");
+/*letra tercera seccion parrafo de la imagen del rio parana*/
+@import url("https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap");
+/*letra de contacto*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@200&display=swap");
+/*letra parrafo cuarta seccion*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+/*Letra h1*/
+@import url("https://fonts.googleapis.com/css2?family=Wire+One&display=swap");
+/*letra RIVER footer*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&display=swap");
+/*variables*/
+/*Partials*/
+header .navbar li {
+  display: inline;
+}
+header .img-portada {
+  background-image: url(img/Portada/Foto-portada.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 1000px;
+}
+header .caja-portada {
+  width: 500px;
+  height: 550px;
+  background-color: #1d1d1d;
+  margin: auto;
+  position: relative;
+  top: 150px;
+}
+header h1 {
+  color: white;
+  text-align: center;
+  font-family: "Wire One", sans-serif;
+  margin-top: 10px;
+}
+header h2 {
+  color: white;
+}
+header p {
+  color: white;
+  text-align: center;
+}
+
+footer {
+  background-color: black;
+  /*armado del logo del footer*/
+  /*fin del logo del footer*/
+}
+footer h6 {
+  text-align: center;
+  padding-top: 60px;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: 55px;
+  color: #474545;
+}
+footer .eventos {
+  font-family: "Gotu", sans-serif;
+  font-size: 18px;
+  color: rgb(206, 111, 44);
+}
+footer p {
+  text-align: center;
+  color: #474545;
+}
+footer p .redes p {
+  text-align: center;
+  color: #474545;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.portada {
+  background-image: url(img/Portada/Foto-portada.jpg);
+  width: 100%;
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.logo img {
+  margin-left: 20px;
+  background-color: white;
+  width: 100px;
+  height: 80px;
+  float: left;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.navbar nav {
+  float: left;
+  padding-top: 25px;
+}
+.navbar li {
+  position: relative;
+  left: 200px;
+  padding: 25px;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+.navbar a:hover {
+  color: rgb(206, 111, 44);
+}
+
+.primera-seccion {
+  background-color: black;
+}
+.primera-seccion h3 {
+  color: white;
+  text-align: center;
+  font-family: "Nixie One", cursive;
+  font-size: 23px;
+}
+.primera-seccion .river {
+  font-size: 55px;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  color: rgb(206, 111, 44);
+}
+
+.segunda-seccion .caja-rosario, .segunda-seccion .caja-funes {
+  background-color: rgb(252, 244, 173);
+  width: 50%;
+  float: left;
+}
+.segunda-seccion .caja-rosario h4, .segunda-seccion .caja-funes h4 {
+  text-align: center;
+  font-family: "Thasadith", sans-serif;
+  font-weight: bolder;
+  padding-top: 50px;
+}
+.segunda-seccion .caja-rosario p, .segunda-seccion .caja-funes p {
+  line-height: 2;
+  padding: 20px;
+  font-family: "Syne", sans-serif;
+}
+.tercera-seccion {
+  background-image: url(img/Rio/Rio\ parana.jpg);
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+.tercera-seccion p {
+  text-align: center;
+  padding-top: 250px;
+  font-family: "Chau Philomene One", sans-serif;
+  font-size: 45px;
+  color: black;
+}
+
+.cuarta-seccion {
+  background-color: rgb(252, 244, 173);
+}
+.cuarta-seccion svg {
+  width: 70px;
+  height: 70px;
+  color: black;
+  text-align: center;
+}
+.cuarta-seccion .boda, .cuarta-seccion .coorporativo, .cuarta-seccion .graduacion, .cuarta-seccion .cumple {
+  width: 100px;
+  height: 120px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.cuarta-seccion p {
+  text-align: center;
+  color: black;
+}
+.parrafo-cuarta-seccion p {
+  margin-top: 50px;
+  font-family: "Rubik", sans-serif;
+  color: black;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.quinta-seccion .imagen-5seccion {
+  background-image: url(img/Servicios/pexels-rachel-claire-4577179.jpg);
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.quinta-seccion p {
+  font-family: "Syne", sans-serif;
+  line-height: 2;
+  font-size: 18px;
+}
+.quinta-seccion li {
+  list-style: none;
+  line-height: 2.5;
+}
+
+.imagen-6seccion {
+  width: 100%;
+  height: 500px;
+  background-image: url(img/Servicios/foto\ servicios\ 2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*formulario de contacto*/
+.formulario {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(img/contacto/foto-contact.jpg);
+  background-size: cover;
+}
+.formulario h5 {
+  font-size: 45px;
+  color: black;
+  font-family: "Big Shoulders Stencil Text", cursive;
+}
+
+.contacto {
+  width: 500px;
+  height: 700px;
+  background-color: #2c2c2c;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.contacto label, .contacto button, .contacto textarea, .contacto input {
+  margin-bottom: 25px;
+  color: white;
+  margin-left: 50px;
+}
+.contacto input {
+  color: white;
+}
+.contacto button {
+  background-color: rgb(206, 111, 44);
+  color: white;
+}
+.contacto h5 {
+  color: rgb(206, 111, 44);
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*armado de html Catering*/
+.imagen-portada-catering {
+  width: 100%;
+  height: 800px;
+  background-image: url(img/Catering/catering\ pag.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.imagen-portada-catering h2 {
+  font-family: "Big Shoulders Stencil Display", cursive;
+  text-align: center;
+  padding-top: 730px;
+  font-size: 50px;
+  color: rgb(206, 111, 44);
+}/*# sourceMappingURL=style.css.map */

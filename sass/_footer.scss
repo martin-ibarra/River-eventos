@@ -1,0 +1,35 @@
+footer {
+
+    background-color: black;
+
+    /*armado del logo del footer*/
+    h6 {
+        text-align: center;
+        padding-top: 60px;
+
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        font-size: 55px;
+        color: #474545;
+
+    }
+
+    .eventos {
+        font-family: 'Gotu', sans-serif;
+        font-size: 18px;
+        color: rgb(206, 111, 44);
+    }
+
+    /*fin del logo del footer*/
+    p {
+        text-align: center;
+        color: #474545;
+
+
+        .redes p {
+            text-align: center;
+            color: #474545;
+
+
+        }
+    }
+}
