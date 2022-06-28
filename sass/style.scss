@@ -17,11 +17,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
 /*letra RIVER footer*/
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&display=swap');
+/*Letra pagina catering platos*/
+@import url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
+/*Letra menu tercer seccion de catering*/
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz@10..100&display=swap');
+/*texto imagen de cheff pagina catering*/
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap');
+/*letra seccion vinos de la pagina de barra de tragos*/
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap');
 
 
 /*variables*/
 $parrafo-general: 'Syne', sans-serif;
-;
+
 /*Partials*/
 @import "header";
 @import "footer";
@@ -33,61 +42,25 @@ body {
     box-sizing: border-box;
 }
 
-.portada {
-    background-image: url(img/Portada/Foto-portada.jpg);
-    width: 100%;
-    height: 900px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+/*map get*/
 
-}
+/*h3 de la primera seccion del index*/
+$h3-sec-1: (
+    color:white,
+    centro:center,
+    tfuente:23px,
+);
 
-.logo {
-    img {
-        margin-left: 20px;
-        background-color: white;
-        width: 100px;
-        height: 80px;
-        float: left;
-        padding-right: 8px;
-        padding-left: 8px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-    }
-}
-
-.navbar {
-    nav {
-        float: left;
-        padding-top: 25px;
-    }
-
-    li {
-        position: relative;
-        left: 200px;
-        padding: 25px;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-
-        &:hover {
-            color: rgb(206, 111, 44);
-
-        }
-    }
-}
+/*primera seccion del index*/
 
 .primera-seccion {
     background-color: black;
 
     h3 {
-        color: white;
-        text-align: center;
+        color: map-get($h3-sec-1, color);
+        text-align: map-get($h3-sec-1 , centro);
         font-family: 'Nixie One', cursive;
-        font-size: 23px;
+        font-size: map-get($h3-sec-1 , tfuente);
     }
 
     .river {
@@ -97,6 +70,8 @@ body {
     }
 
 }
+
+/*segunda seccion index*/
 
 .segunda-seccion {
     .caja-rosario {
@@ -125,6 +100,8 @@ body {
     }
 }
 
+/*tercera seccion index*/
+
 .tercera-seccion {
     background-image: url(img/Rio/Rio\ parana.jpg);
     width: 100%;
@@ -141,6 +118,8 @@ body {
         color: black;
     }
 }
+
+/*cuarta seccion index*/
 
 .cuarta-seccion {
 
@@ -196,6 +175,8 @@ body {
     }
 }
 
+/*quinta seccion index*/
+
 .quinta-seccion {
 
 
@@ -225,11 +206,12 @@ body {
 
 }
 
+/*sexta seccion index*/
 
 .imagen-6seccion {
     width: 100%;
     height: 500px;
-    background-image: url(img/Servicios/foto\ servicios\ 2.jpg);
+    background-image: url(img/Servicios/mozos.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -303,13 +285,17 @@ body {
 }
 
 /*armado de html Catering*/
+
+/*portada pagina catering*/
+
 .imagen-portada-catering {
     width: 100%;
-    height: 800px;
-    background-image: url(img/Catering/catering\ pag.jpeg);
+    height: 900px;
+    background-image: url(img/Catering/Foto-portada-catering.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
+
 
     h2 {
         font-family: 'Big Shoulders Stencil Display', cursive;
@@ -319,4 +305,408 @@ body {
         color: rgb(206, 111, 44);
     }
 
+}
+
+/*Primera seccion pagina catering- fotos de los platos-*/
+.platos {
+    background-image: url(img/Catering/foto-platos.jpg);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+
+    h2 {
+        text-align: center;
+        padding-top: 180px;
+        font-family: 'Imbue', serif;
+        font-size: 50px;
+    }
+}
+
+
+.bocados {
+    background-image: url(img/Catering/foto-bocados.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: 100% 100%;
+
+    &:hover {
+        border: 8px solid white;
+    }
+
+    p {
+        text-align: center;
+        font-size: 40px;
+        width: 100%;
+        height: 55px;
+        background-color: rgb(201, 136, 89);
+        color: white;
+        font-family: 'Tulpen One', cursive;
+    }
+}
+
+.entrada {
+    background-image: url(img/Catering/foto-entradas.jpeg);
+    width: 100%;
+    height: 500px;
+    background-size: 100% 100%;
+
+    &:hover {
+        border: 8px solid white;
+    }
+
+    p {
+        text-align: center;
+
+        font-size: 40px;
+        font-family: 'Tulpen One', cursive;
+        width: 100%;
+        height: 55px;
+        background-color: rgb(201, 136, 89);
+        color: white;
+    }
+}
+
+.principales {
+    background-image: url(img/Catering/foto-pprincipal.jpeg);
+    width: 100%;
+    height: 500px;
+    background-size: 100% 100%;
+
+    &:hover {
+        border: 8px solid white;
+    }
+
+    p {
+        text-align: center;
+
+        font-size: 40px;
+        font-family: 'Tulpen One', cursive;
+        width: 100%;
+        height: 55px;
+        background-color: rgb(201, 136, 89);
+        color: white;
+    }
+
+}
+
+.postres {
+    background-image: url(img/Catering/foto-postre.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: 100% 100%;
+
+    &:hover {
+        border: 8px solid white;
+    }
+
+    p {
+        text-align: center;
+
+        font-size: 40px;
+        font-family: 'Tulpen One', cursive;
+        width: 100%;
+        height: 55px;
+        background-color: rgb(201, 136, 89);
+        color: white;
+    }
+}
+
+.menues-catering {
+    background-color: rgb(252, 244, 173);
+
+    height: 100px;
+
+
+    p {
+        color: black;
+        font-family: 'Imbue', serif;
+        font-size: 40px;
+        text-align: center;
+        padding-top: 15px;
+
+    }
+
+
+}
+
+
+.listado-menu-catering {
+    background-image: url(img/Catering/fondo-general-menu.jpg);
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cuadro-1-catering {
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    background-image: url(img/Catering/fondo-menu.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 15px 20px 35px;
+    border-radius: 40px;
+
+    p {
+
+        padding-bottom: 10px;
+        padding-top: 20px;
+        text-align: center;
+        color: white;
+        font-family: 'Thasadith', sans-serif;
+        font-size: 20px;
+
+    }
+
+    li {
+        color: white;
+        list-style: none;
+
+        line-height: 1.5;
+        font-family: 'Thasadith', sans-serif;
+        font-size: 18px;
+    }
+}
+
+.imagen-cheff {
+
+    background-image: url(img/Catering/foto-cheff.jpg);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+    p {
+        text-align: center;
+        padding-top: 200px;
+        font-family: 'Alumni Sans', sans-serif;
+        font-size: 40px;
+        color: black;
+
+    }
+
+}
+
+/*Pagina barra de tragos*/
+/*portada*/
+.imagen-portada-tragos {
+    background-image: url(img/Barra-tragos/tragos-1.jpeg);
+    width: 100%;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+}
+
+/*primera seccion tragos*/
+.primera-seccion-tragos {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+
+
+    h2 {
+        text-align: center;
+        margin-top: 80px;
+        font-family: 'Alumni Sans', sans-serif;
+        font-size: 45px;
+
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Wire One', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+
+/*segunda seccion tragos*/
+.segunda-seccion-tragos {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 100px;
+
+    img {
+        padding-bottom: 10px;
+
+
+    }
+
+
+}
+
+/*tercera seccion tragos*/
+.tercera-seccion-tragos {
+    background-color: #131313;
+
+    p {
+        text-align: center;
+        font-family: 'Alumni Sans', sans-serif;
+        font-size: 30px;
+        color: rgb(104, 103, 103);
+
+    }
+
+    hr {
+        color: white;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+.contenedor-general-tragos {
+    background-image: url(img/Barra-tragos/foto-4seccion.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.cuarta-seccion-tragos {
+
+    width: 75%;
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.silver {
+    width: 100%;
+    background-image: url(img/Barra-tragos/silver.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+
+    p {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    hr {
+        width: 75%;
+        margin: auto;
+
+        border: solid 2px black;
+    }
+
+}
+
+.black {
+    width: 100%;
+    background-image: url(img/Barra-tragos/blackjpg.jpg);
+    height: 400px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    p {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    hr {
+        width: 75%;
+        margin: auto;
+
+        border: solid 2px white;
+    }
+}
+
+.gold {
+    width: 100%;
+    background-image: url(img/Barra-tragos/gold.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    p {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    hr {
+        width: 75%;
+        margin: auto;
+
+        border: solid 2px black;
+    }
+}
+
+.bronze {
+    width: 100%;
+    background-image: url(img/Barra-tragos/bronzee.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    p {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    hr {
+        width: 75%;
+        margin: auto;
+
+        border: solid 2px black;
+    }
+}
+
+/*quinta seccion -- bodegas de vino*/
+.fondo-bodegas {
+    width: 100%;
+    height: 600px;
+    background-image: url(img/Barra-tragos/foto-fondo-bodegas.jpg);
+    background-size: 100% 100%;
+
+    p {
+        text-align: center;
+        color: white;
+        position: relative;
+        top: 50px;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-size: 45px;
+    }
+
+
+
+}
+
+.elegi {
+    P {
+        font-family: 'Mr Dafoe', cursive;
+        font-size: 30px;
+    }
+
+}
+
+.torres {
+
+
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        margin-left: 120px;
+        margin-top: 150px;
+    }
+}
+
+.lopez {
+    @extend .torres;
+}
+
+.cruzat {
+    @extend .lopez;
 }

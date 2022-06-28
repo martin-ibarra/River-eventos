@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="sass/style.css">
     <!--Link boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Document</title>
+    <!--link favicon-->
+    <link rel="icon" href="sass/favicon_io (2)/favicon.ico">
+    <!--link animacion-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>River Eventos</title>
 </head>
 <body>
     <header>
@@ -30,9 +34,9 @@
                                     
                                     <li><a href="index.html">INICIO</a></li>
                                     <li><a href="catering.html">CATERING</a></li>
-                                    <li><a href="#">BARRA DE TRAGOS</a></li>  
-                                    <li><a href="#">IMAGENES</a></li>
-                                    <li><a href="#">QUIENES SOMOS</a></li>         
+                                    <li><a href="barra-tragos.html">BARRA DE TRAGOS</a></li>  
+                                    <li><a href="imagenes.html">IMAGENES</a></li>
+                                    <li><a href="quienes-somos.html">QUIENES SOMOS</a></li>         
                                 </ul>
                             </nav>
 
@@ -120,7 +124,7 @@
             <div class="segunda-seccion">
                 <div class="row">
                     <div class="col-xl-12 col-md-12 col-sm-12">
-                        <div class="caja-rosario">
+                        <div class="caja-rosario" data-aos="fade-right">
                             <h4>
                                 Rosario
                             </h4>
@@ -128,7 +132,7 @@
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque maiores itaque nam perspiciatis, debitis unde iusto earum vel eveniet, esse amet error ea repudiandae, ullam officia nostrum! Fugit, illo voluptate.
                                 </p>
                         </div>
-                        <div class="caja-funes">
+                        <div class="caja-funes" data-aos="fade-left">
                             <h4>
                                 Funes
                             </h4>
@@ -143,7 +147,7 @@
             <div class="container-fluid">    
                 <div class="tercera-seccion">
                     <div class="row">
-                        <div class="col-xl-12 col-md-12 col-sm-12   ">
+                        <div class="col-xl-12 col-md-12 col-sm-12" data-aos="zoom-in">
                             <p>
                                 Un lugar, momentos inolvidables.
                             </p>
@@ -164,7 +168,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="boda">
+                            <div class="boda" data-aos="zoom-out">
                                 <p>
                                     Bodas
                                 </p>
@@ -174,7 +178,7 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="cumple">
+                            <div class="cumple" data-aos="zoom-out">
                                 <p>
                                     Cumpleaños
                                 </p>
@@ -184,7 +188,7 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="graduacion">
+                            <div class="graduacion" data-aos="zoom-out">
                                 <p>
                                     Graduaciones
                                 </p>
@@ -195,7 +199,7 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="coorporativo">
+                            <div class="coorporativo" data-aos="zoom-out">
                                 <p>
                                     Coorporativos
                                 </p>
@@ -232,7 +236,7 @@
                                 </ul>
                             </div>
                             <div class="col-xl-8 col-md-8  col-sm-12">
-                                <div class="imagen-5seccion">
+                                <div class="imagen-5seccion" data-aos="zoom-out-left">
 
                                 </div>
                             </div>
@@ -243,7 +247,7 @@
                         <div class="sexta-seccion">
                             <div class="row">
                                 <div class="col-xl-8 col-md-8  col-sm-12">
-                                    <div class="imagen-6seccion">
+                                    <div class="imagen-6seccion"  data-aos="zoom-out-right">
 
                                     </div>
                                 </div>
@@ -276,7 +280,8 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12">
-                                            <div class="contacto">
+                                            <div class="contacto" data-aos="fade-up"
+                                            data-aos-anchor-placement="top-bottom">
                                                 <h5>
                                                     Contáctanos
                                                 </h5>
@@ -346,5 +351,11 @@
     </footer>
      <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!--js animacion-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

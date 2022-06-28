@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Etiquetas meta para SEO-->
+    <!--SEO-->
     <meta name="description" content="Celebra tus eventos en nuestros salones de Rosario y funes. Catering, barra de tragos y espacios ambientados. Cumpleaños, bodas, y eventos coorporativos en un festejo hecho a tu medida">
     <meta name="keywords" content="Salon de eventos, salon Rosario, salon Funes, catering y barra de tragos" >
     <!--link boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!--Link favicon-->
-    <link rel="icon" href="favicon_io (2)/favicon.ico">
+    <link rel="icon" href="sass/favicon_io (2)/favicon.ico">
+    <!--link animacion-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--link de sass-->
     <link rel="stylesheet" href="sass/style.css">
     <title>RIVER-Eventos | Catering</title>
@@ -30,9 +32,9 @@
                                 <ul>
                                     <li><a href="index.html">INICIO</a></li>
                                     <li><a href="catering.html">CATERING</a></li>
-                                    <li><a href="#">BARRA DE TRAGOS</a></li>  
-                                    <li><a href="#">IMAGENES</a></li>
-                                    <li><a href="#">QUIENES SOMOS</a></li>         
+                                    <li><a href="barra-tragos.html">BARRA DE TRAGOS</a></li>  
+                                    <li><a href="imagenes.html">IMAGENES</a></li>
+                                    <li><a href="quienes-somos.html">QUIENES SOMOS</a></li>         
                                 </ul>
                             </nav>
                         </div>
@@ -44,131 +46,114 @@
     </header>
     <main>
 
-        <!--comienzo de la primera seccion de la pagina "se incluyen titulos y parrafo"-->
-
-        
-
-        <!--Comienza la segunda seccion de la pagina "se incluyen las fotos de los platos con su titulo"-->
-       
+        <!--comienzo de la primera seccion de la pagina "se incluyen titulos e imagenes"-->
             <div class="container-fluid">
-                <div class="primera-seccion-catering">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-12">
+                        <div class="platos" data-aos="fade-up">
+                            <h2>
+                                NUESTROS PLATOS
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container-fluid">
+                <div class="segunda-seccion-catering">
                     <div class="row">
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <p>
-                                Bocados
-                            </p>
-                            <img src="sass/img/Catering/foto-bocados.jpg" alt="foto del plato bocados" width="100%" height="500">
+                            <div class="bocados">
+                                <p>
+                                    BOCADOS
+                                </p>
+                            </div>
+                            
                         </div>
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <p>
-                                Entradas
-                            </p>
-                            <img src="sass/img/Catering/foto-entradas.jpeg" alt="foto del plato entradas " width="100%" height="500">
+                            <div class="entrada">
+                                <p>
+                                    ENTRADAS
+                                </p>
+                            </div>
+                            
                         </div>
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <p>
-                                Platos principales
-                            </p>
-                            <img src="sass/img/Catering/foto-pprincipal.jpeg"foto del plato principal" width="100%" height="500">
+                            <div class="principales">
+                                <p>
+                                    PLATOS PRINCIPALES
+                                </p>
+                            </div>
                         </div>
                         <div class="col-xl-3 col-md-6 col-sm-12">
-                            <p>
-                                Postres
-                            </p>
-                            <img src="sass/img/Catering/foto-postre.jpg " alt="foto del plato postre" width="100%" height="500">
+                            <div class="postres">
+                                <p>
+                                    POSTRES
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         
-        <!--Comienza la tercera seccion de la pagina "se incluyen las fotos de los platos con su titulo"-->
-        <div class="tercer-seccion">
-            <div class="container-fluid">
+       <!--Comienza la segunda seccion de catering-->
+         <div class="container-fluid">
+            <div class="menues-catering">
                 <div class="row">
-                    <div class="col-xl-12 col-sm-12 col-md-12 ">
-                        
-                        <img src="sass/img/Catering/foto-cheff.jpg" alt="">
+                    <div class="col-xl-12 col-sm-12 col-md-12" data-aos="fade-up">
+                        <P>
+                            MENÚ ADAPTADO A TU PALADAR 
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <!--Comienza la cuarta seccion "fotos con descripcion"-->
-        
-         <!--Comienza la quinta seccion "menues"-->
-         <div class="container-fluid">
-            <div class="menues">
-                <div class="row">
-                    <div class="col-xl-12 col-sm-12 col-md-12">
-                        <P>
-                            MENÚES
-                        </P>
-                    </div>
-                    
-                </div>
-            </div>
-         </div>
-         <!--sexta seccion/ listado de los menues de ambos salones-->
-         <div class="container-fluid">
-            <div class="listado-menu">
-                <div class="row">
-                    <div class="col-xl-12 col-sm-12 col-md-12">
-                        <h6>
-                            MENU FORMAL
-                        </h6>
-                        <P>
-                            Ofrecemos todos los pasos para que vivas una experiencia gastronómica a la altura del evento que siempre soñaste.
-                        </P>
-                    </div>
-                </div>
-                        <div class="container-fluid">
-                            <div class="cuadro-1">
-                                <div class="row">
-                                    <div class="col-xl-4 col-sm-12 col-md-12">
-                                        <ul>
-                                            <li>Bocados frios</li>
-                                            <li>Bocados calientes</li>
-                                            <li>Buffet Froid</li>
-                                            <li>Variedad de panificados</li>
-                                            <li>Buffet calientes</li>
-                                            <li>Islas regionales de las ciudades más prestigiosas del mundo</li>
-                                            <li>Entradas</li>
-                                            <li>Platos principales</li>
-                                            <li>Postres</li>
-                                            <li>Mesa dulce</li>
-                                            <li>Servicio de cafeteria</li>
-                                            <li>Final gastronomico</li>
-                                        </ul>
-                                    </div>
-                                </div>
+         <!--tercera seccion/ listado de los menues de ambos salones-->
+        <div class="container-fluid">
+            <div class="listado-menu-catering">
+                <div class="container-fluid">
+                    <div class="cuadro-1-catering" data-aos="flip-left">
+                        <div class="row">
+                            <div class="col-xl-12 col-sm-12 col-md-12" >
+                                
+                                <P>
+                                    Ofrecemos todos los pasos para que vivas una experiencia gastronómica única.
+                                </P>
+                                <ul>
+                                    <li>Bocados frios</li>
+                                    <li>Bocados calientes</li>
+                                    <li>Buffet Froid</li>
+                                    <li>Variedad de panificados</li>
+                                    <li>Buffet calientes</li>
+                                    <li>Islas regionales de las ciudades más prestigiosas del mundo</li>
+                                    <li>Entradas</li>
+                                    <li>Platos principales</li>
+                                    <li>Postres</li>
+                                    <li>Mesa dulce</li>
+                                    <li>Servicio de cafeteria</li>
+                                    <li>Final gastronomico</li>
+                                </ul>
+                                <p>
+                                    En todos nuestros menues contamos con opciones para los más jóvenes, opciones de menú sin TAAC, veggie, vegetariano y certificación de menú Kosher.
+                                </p>
                             </div>
                         </div>
-                        <p>
-                            En todos nuestros menues contamos con opciones para los más jóvenes, opciones de menú sin TAAC, veggie, vegetariano y certificación de menú Kosher.
-                        </p>
-                        <h6>
-                            TODOS NUESTRO SERVICIOS INCLUYEN:
-                        </h6>
-                        <div class="container-fluid">
-                            <div class="cuadro-2">
-                            
-                                <div class="row">
-                                    <div class="col-xl-6 col-sm-12 col-md-12">    
-                                        <ul>
-                                            <li>Vajilla completa</li>
-                                            <li>Cristaleria completa</li>
-                                            <li>Manteleria completa</li>
-                                            <li>Maitre principal</li>
-                                            <li>Camareros</li>
-                                            <li>Chef principal</li>
-                                            <li>Cocineros y ayudantes de cocina</li>
-                                            <li>Bacheros</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
             </div>
-        </div>            
+        </div>
+        <div class="container-fluid">
+            <div class="imagen-cheff">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-12">
+                       <p>No te pierdas el inconfundible sabor de nuestro Cheff</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                      
 
     </main>
     
@@ -212,5 +197,10 @@
     </footer>
     <!-- JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!--js animacion-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </body>
 </html>
