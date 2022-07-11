@@ -13,10 +13,13 @@ footer {
 
     }
 
+
+
     .eventos {
         font-family: 'Gotu', sans-serif;
         font-size: 18px;
         color: rgb(206, 111, 44);
+        padding-bottom: 50px;
     }
 
     /*fin del logo del footer*/
@@ -24,10 +27,11 @@ footer {
         text-align: center;
         color: #474545;
 
-
         .redes p {
             text-align: center;
             color: #474545;
+
+
 
         }
 
@@ -35,6 +39,40 @@ footer {
             width: 50px;
             height: 50px;
             padding-left: 15px;
+            padding-top: 25px;
+        }
+    }
+
+    .volver {
+        a {
+            font-family: $letra-menu;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and(max-width:576px) {
+    footer {
+        h6 {
+            font-size: 40px;
+        }
+
+        .eventos {
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .redes {
+            svg {
+                width: 50px;
+                height: 50px;
+            }
         }
     }
 }
