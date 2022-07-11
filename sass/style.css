@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*google Fonts*/
 /*Letra titulos salon rosario /funes de la primera seccion del index*/
 @import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
@@ -25,10 +26,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap");
 /*letra parrafo general - variable*/
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+/*Letra menu - variable*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
 /*variables*/
 /*Partials*/
-/*variable carousel de portada*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 header .portada {
   background-image: url(img/Portada/Foto-portada.jpg);
   background-position: center;
@@ -36,63 +45,96 @@ header .portada {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header .logo img {
-  margin-left: 20px;
-  background-color: white;
+header .portada .logo {
   width: 100px;
   height: 80px;
-  float: left;
-  padding-right: 8px;
-  padding-left: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
-header .navbar nav {
-  float: left;
-  padding-top: 25px;
+header .portada nav {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  opacity: 0.8;
 }
-header .navbar li {
-  position: relative;
-  left: 180px;
-  padding: 25px;
-  display: inline;
+header .portada nav .enlace {
+  position: absolute;
+  padding: 10px 40px;
 }
-header .navbar a {
+header .portada nav ul {
+  float: right;
+  margin-right: 20px;
+}
+header .portada nav li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 5px;
+}
+header .portada nav a {
+  color: black;
+  font-size: 18px;
   text-decoration: none;
-  color: white;
+  padding: 7px 13px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
 }
-header .navbar a:hover {
+header .portada nav a.active,
+header .portada nav a:hover {
   color: rgb(206, 111, 44);
 }
-
-.caja-portada {
-  width: 500px;
-  height: 550px;
-  background-color: #1d1d1d;
-  margin: auto;
-  position: relative;
-  top: 150px;
-}
-
-h1 {
+header .portada .checkbtn {
+  font-size: 30px;
   color: white;
-  text-align: center;
-  font-family: "Wire One", sans-serif;
-  margin-top: 10px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+header .portada #check {
+  display: none;
 }
 
-h2 {
-  color: white;
-  font-family: "Imbue", serif;
+@media screen and (max-width: 952px) {
+  header .portada nav ul li a {
+    font-size: 15px;
+  }
 }
-
-p {
-  color: white;
-  text-align: center;
-  font-family: "Imbue", serif;
-  font-size: 20px;
+@media screen and (max-width: 768px) {
+  header .portada nav {
+    background-color: white;
+    opacity: 1;
+  }
+  header .portada nav .checkbtn {
+    display: block;
+    color: black;
+  }
+  header .portada nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+  }
+  header .portada nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  header .portada nav ul a {
+    font-size: 20px;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+  }
+  header .portada nav ul a:hover,
+header .portada nav ul a.active {
+    background: none;
+    color: rgb(206, 111, 44);
+  }
+  header .portada nav #check:checked ~ ul {
+    left: 0;
+  }
 }
-
 footer {
   background-color: black;
   /*armado del logo del footer*/
@@ -109,6 +151,7 @@ footer .eventos {
   font-family: "Gotu", sans-serif;
   font-size: 18px;
   color: rgb(206, 111, 44);
+  padding-bottom: 50px;
 }
 footer p {
   text-align: center;
@@ -122,14 +165,35 @@ footer p svg {
   width: 50px;
   height: 50px;
   padding-left: 15px;
+  padding-top: 25px;
+}
+footer .volver a {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
 }
 
+@media screen and (max-width: 576px) {
+  footer h6 {
+    font-size: 40px;
+  }
+  footer .eventos {
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  footer p {
+    font-size: 18px;
+  }
+  footer .redes svg {
+    width: 50px;
+    height: 50px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
+  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -146,28 +210,32 @@ body {
   font-size: 23px;
 }
 .primera-seccion .river {
-  font-size: 55px;
-  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: 60px;
+  font-family: "Big Shoulders Stencil Text";
   color: rgb(206, 111, 44);
 }
 
 /*segunda seccion index*/
 .segunda-seccion .caja-rosario, .segunda-seccion .caja-funes {
-  background-color: rgb(252, 244, 173);
+  background-color: rgb(238, 238, 238);
   width: 50%;
   float: left;
+  height: 100%;
 }
 .segunda-seccion .caja-rosario h4, .segunda-seccion .caja-funes h4 {
   text-align: center;
-  font-family: "Thasadith", sans-serif;
+  font-family: "Big Shoulders Stencil Text";
   font-weight: bolder;
   padding-top: 50px;
+  color: rgb(206, 111, 44);
+  font-size: 30px;
 }
 .segunda-seccion .caja-rosario p, .segunda-seccion .caja-funes p {
   line-height: 2;
-  padding: 20px;
-  font-family: "Fira Sans", sans-serif;
+  padding: 20px 30px;
+  font-family: "Bellefair", serif;
   color: #131313;
+  font-size: 20px;
 }
 /*tercera seccion index*/
 .tercera-seccion {
@@ -181,40 +249,85 @@ body {
 .tercera-seccion p {
   text-align: center;
   padding-top: 250px;
-  font-family: "Chau Philomene One", sans-serif;
-  font-size: 45px;
-  color: black;
+  font-family: "Bellefair", serif;
+  font-size: 50px;
+  color: white;
 }
 
 /*cuarta seccion index*/
 .cuarta-seccion {
-  background-color: rgb(252, 244, 173);
+  background-color: rgb(238, 238, 238);
 }
-.cuarta-seccion svg {
-  width: 70px;
-  height: 70px;
-  color: black;
-  text-align: center;
-}
-.cuarta-seccion .boda, .cuarta-seccion .coorporativo, .cuarta-seccion .graduacion, .cuarta-seccion .cumple {
-  width: 100px;
-  height: 120px;
-  margin: auto;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-.cuarta-seccion p {
-  text-align: center;
-  color: black;
-  font-family: "Fira Sans", sans-serif;
+
+@media screen and (max-width: 768px) {
+  .cuarta-seccion p {
+    text-align: center;
+    color: black;
+    font-family: "Bellefair", serif;
+    font-size: 15px;
+  }
+  .cuarta-seccion .boda, .cuarta-seccion .coorporativo, .cuarta-seccion .graduacion, .cuarta-seccion .cumple {
+    width: 80px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    color: white;
+  }
+  .cuarta-seccion .boda svg, .cuarta-seccion .coorporativo svg, .cuarta-seccion .graduacion svg, .cuarta-seccion .cumple svg {
+    width: 70px;
+    height: 70px;
+    color: black;
+  }
 }
 .parrafo-cuarta-seccion p {
   margin-top: 50px;
-  font-family: "Rubik", sans-serif;
+  font-family: "Bellefair", serif;
   color: black;
-  font-size: 18px;
+  font-size: 22px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 100px;
+}
+
+/*titulo de los íconos*/
+p {
+  text-align: center;
+  color: black;
+  font-family: "Bellefair", serif;
+  font-size: 20px;
+}
+
+.boda, .coorporativo, .graduacion, .cumple {
+  width: 100px;
+  height: 120px;
+  margin: auto;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  color: white;
+}
+.boda svg, .coorporativo svg, .graduacion svg, .cumple svg {
+  width: 100px;
+  height: 100px;
+  color: black;
+}
+
+p {
+  text-align: center;
+  color: black;
+  font-family: "Bellefair", serif;
+}
+
+.cumple {
+  margin-bottom: none;
+}
+
+.graduacion {
+  margin-bottom: none;
+}
+
+.coorporativo {
+  margin-bottom: 150px;
 }
 
 /*quinta seccion index*/
@@ -226,26 +339,34 @@ body {
   background-size: cover;
 }
 .quinta-seccion p {
-  font-family: "Fira Sans", sans-serif;
   line-height: 1.5;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   color: #131313;
+  font-family: "Bellefair", serif;
 }
 .quinta-seccion .incluidos {
-  padding-top: 25px;
+  padding-top: 30px;
+  font-family: "Big Shoulders Stencil Text";
+  padding-bottom: 20px;
+  color: rgb(206, 111, 44);
+  font-size: 28px;
 }
 
 /*sexta seccion index*/
 .sexta-seccion p {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Bellefair", serif;
   line-height: 1.5;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   color: #131313;
 }
 .sexta-seccion .optativos {
-  padding-top: 25px;
+  font-family: "Big Shoulders Stencil Text";
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: rgb(206, 111, 44);
+  font-size: 28px;
 }
 .sexta-seccion .propio-servicio {
   padding-top: 50px;
@@ -274,32 +395,141 @@ form .formulario P {
   font-size: 50px;
   color: rgb(161, 98, 53);
 }
-form .formulario input {
-  background-color: #131313;
-}
-form .formulario textarea {
-  background-color: #131313;
-}
 form .formulario .email {
   margin-bottom: 15px;
 }
 form .formulario .boton {
-  font-family: "Gotu", sans-serif;
+  font-family: "Bellefair", serif;
+}
+form .formulario input {
+  font-family: "Bellefair", serif;
+}
+form .formulario textarea {
+  font-family: "Bellefair", serif;
 }
 
 /*armado de html Catering*/
 /*portada pagina catering*/
-.imagen-portada-catering {
-  height: 150vh;
-  background-image: url(img/Catering/8\ Tips\ to\ Instantly\ Improve\ Your\ Restaurant\ Photography.jpg);
+.portada-catering {
+  background-image: url(img/Lot\ of\ appetizer\ plates\ containing\ dish\,\ meal\,\ and\ table.jpg);
+  background-position: center;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
+}
+.portada-catering .logo {
+  width: 100px;
+  height: 80px;
+}
+.portada-catering nav {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  opacity: 0.8;
+}
+.portada-catering nav .enlace {
+  position: absolute;
+  padding: 10px 40px;
+}
+.portada-catering nav ul {
+  float: right;
+  margin-right: 20px;
+}
+.portada-catering nav li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 5px;
+}
+.portada-catering nav a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 7px 13px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+}
+.portada-catering nav a.active,
+.portada-catering nav a:hover {
+  color: rgb(206, 111, 44);
+}
+.portada-catering .checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.portada-catering #check {
+  display: none;
+}
+.portada-catering .catering h3 {
+  text-align: center;
+  margin-top: 260px;
+  font-size: 70px;
+  color: black;
+  font-family: "Mr Dafoe", cursive;
+}
+.portada-catering .catering P {
+  font-family: "Big Shoulders Stencil Text";
+  font-size: 80px;
 }
 
+@media screen and (max-width: 952px) {
+  .portada-catering nav ul li a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portada-catering nav {
+    background-color: white;
+    opacity: 1;
+  }
+  .portada-catering nav .checkbtn {
+    display: block;
+    color: black;
+  }
+  .portada-catering nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+  }
+  .portada-catering nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .portada-catering nav ul a {
+    font-size: 20px;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+  }
+  .portada-catering nav ul a:hover,
+.portada-catering nav ul a.active {
+    background: none;
+    color: rgb(206, 111, 44);
+  }
+  .portada-catering nav #check:checked ~ ul {
+    left: 0;
+  }
+  .portada-catering .catering h3 {
+    margin-top: 170px;
+    font-size: 50px;
+  }
+
+  .titulo-platos .platos h2 {
+    font-size: 40px;
+  }
+}
 /*Primera seccion pagina catering- fotos de los platos-*/
 .titulo-platos {
-  background-color: rgb(252, 244, 173);
+  background-color: rgb(238, 238, 238);
 }
 
 .platos {
@@ -311,13 +541,91 @@ form .formulario .boton {
 .platos h2 {
   text-align: center;
   padding-top: 50px;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 30px;
-  color: #131313;
+  font-family: "Big Shoulders Stencil Text";
+  font-size: 50px;
+  color: rgb(206, 111, 44);
 }
 
+@media screen and (max-width: 768px) {
+  .segunda-seccion-catering .bocados {
+    background-image: url(img/Catering/foto-bocados.jpg);
+    background-position: center;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .segunda-seccion-catering .bocados:hover {
+    border: 8px solid rgb(238, 238, 238);
+  }
+  .segunda-seccion-catering .bocados p {
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    color: white;
+    font-family: "Big Shoulders Text", cursive;
+  }
+  .segunda-seccion-catering .entrada {
+    background-image: url(img/Catering/foto-entradas.jpeg);
+    background-position: center;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .segunda-seccion-catering .entrada:hover {
+    border: 8px solid rgb(238, 238, 238);
+  }
+  .segunda-seccion-catering .entrada p {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Big Shoulders Text", cursive;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    color: white;
+  }
+  .segunda-seccion-catering .principales {
+    background-image: url(img/Catering/foto-pprincipal.jpeg);
+    background-position: center;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .segunda-seccion-catering .principales:hover {
+    border: 8px solid rgb(238, 238, 238);
+  }
+  .segunda-seccion-catering .principales p {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Big Shoulders Text", cursive;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    color: white;
+  }
+  .segunda-seccion-catering .postres {
+    background-image: url(img/Catering/foto-postre.jpg);
+    background-position: center;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .segunda-seccion-catering .postres:hover {
+    border: 8px solid rgb(238, 238, 238);
+  }
+  .segunda-seccion-catering .postres p {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Big Shoulders Text", cursive;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    color: white;
+  }
+}
 .segunda-seccion-catering {
-  background-color: rgb(252, 244, 173);
+  background-color: rgb(238, 238, 238);
 }
 
 .bocados {
@@ -328,7 +636,7 @@ form .formulario .boton {
   background-size: cover;
 }
 .bocados:hover {
-  border: 8px solid rgb(252, 244, 173);
+  border: 8px solid rgb(238, 238, 238);
 }
 .bocados p {
   text-align: center;
@@ -348,7 +656,7 @@ form .formulario .boton {
   background-size: cover;
 }
 .entrada:hover {
-  border: 8px solid rgb(252, 244, 173);
+  border: 8px solid rgb(238, 238, 238);
 }
 .entrada p {
   text-align: center;
@@ -368,7 +676,7 @@ form .formulario .boton {
   background-size: cover;
 }
 .principales:hover {
-  border: 8px solid rgb(252, 244, 173);
+  border: 8px solid rgb(238, 238, 238);
 }
 .principales p {
   text-align: center;
@@ -388,7 +696,7 @@ form .formulario .boton {
   background-size: cover;
 }
 .postres:hover {
-  border: 8px solid rgb(252, 244, 173);
+  border: 8px solid rgb(238, 238, 238);
 }
 .postres p {
   text-align: center;
@@ -404,11 +712,11 @@ form .formulario .boton {
   height: 100px;
 }
 .menues-catering p {
-  color: black;
-  font-family: "Fira Sans", sans-serif;
+  color: rgb(206, 111, 44);
+  font-family: "Bellefair", serif;
   font-size: 25px;
   text-align: center;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px rgb(206, 111, 44);
   width: 300px;
   margin: auto;
   margin-top: 50px;
@@ -416,10 +724,11 @@ form .formulario .boton {
 
 .titulo-menu {
   color: black;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Bellefair", serif;
   font-size: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .menu {
@@ -429,7 +738,8 @@ form .formulario .boton {
   color: black;
   line-height: 1;
   font-size: 15px;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Bellefair", serif;
+  text-align: center;
 }
 
 .imagen-cheff {
@@ -453,6 +763,7 @@ form .formulario .boton {
   font-family: "Mr Dafoe", cursive;
   font-size: 40px;
   margin-top: 100px;
+  text-align: center;
 }
 
 .imagen-platos img {
@@ -464,33 +775,125 @@ form .formulario .boton {
 
 /*Pagina barra de tragos*/
 /*portada*/
-.imagen-portada-tragos {
-  background-image: url(img/Barra-tragos/portada-tragos.jpg);
-  height: 130vh;
+/*menu de la pagina barra de tragos*/
+.portada-tragos {
+  background-image: url(img/Barra-tragos/descarga.jpg);
+  background-position: center;
+  height: 120vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+}
+.portada-tragos .logo {
+  width: 100px;
+  height: 80px;
+}
+.portada-tragos nav {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  opacity: 0.8;
+}
+.portada-tragos nav .enlace {
+  position: absolute;
+  padding: 10px 40px;
+}
+.portada-tragos nav ul {
+  float: right;
+  margin-right: 20px;
+}
+.portada-tragos nav li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 5px;
+}
+.portada-tragos nav a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 7px 13px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+}
+.portada-tragos nav a.active,
+.portada-tragos nav a:hover {
+  color: rgb(206, 111, 44);
+}
+.portada-tragos .checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.portada-tragos #check {
+  display: none;
 }
 
+/*media queris desktop menu barra de tragos*/
+@media screen and (max-width: 952px) {
+  .portada-tragos nav ul li a {
+    font-size: 15px;
+  }
+}
+/*media queris tablet/mobile menu barra de tragos*/
+@media screen and (max-width: 768px) {
+  .portada-tragos nav {
+    background-color: white;
+    opacity: 1;
+  }
+  .portada-tragos nav .checkbtn {
+    display: block;
+    color: black;
+  }
+  .portada-tragos nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+  }
+  .portada-tragos nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .portada-tragos nav ul a {
+    font-size: 20px;
+    color: white;
+  }
+  .portada-tragos nav ul a:hover,
+.portada-tragos nav ul a.active {
+    background: none;
+    color: rgb(206, 111, 44);
+  }
+  .portada-tragos nav #check:checked ~ ul {
+    left: 0;
+  }
+}
 /*primera seccion tragos*/
 .primera-seccion-tragos {
   width: 100%;
   height: 200px;
   margin-bottom: 50px;
+  /*nuestros tragos de autor*/
+  /*especialidades de bartender*/
 }
 .primera-seccion-tragos h2 {
   text-align: center;
   margin-top: 80px;
-  font-family: "Alumni Sans", sans-serif;
-  font-size: 35px;
-  color: #131313;
+  font-family: "Big Shoulders Stencil Text";
+  font-size: 45px;
+  color: rgb(206, 111, 44);
 }
 .primera-seccion-tragos p {
   text-align: center;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  color: #131313;
+  font-family: "Bellefair", serif;
+  font-size: 25px;
+  color: black;
 }
 
 /*segunda seccion tragos*/
@@ -501,37 +904,136 @@ form .formulario .boton {
   padding: 25px;
 }
 
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .segunda-seccion-tragos img {
     width: 100%;
     height: 400px;
     padding: 10px;
   }
 }
+@media screen and (max-width: 768px) {
+  .bartender-video iframe {
+    height: 100%;
+  }
+}
 .bartender-video .img-bartender {
   background-image: url(img/Barra-tragos/bartender.jpg);
-  height: 100vh;
+  height: 110vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bartender-video p {
-  background-color: #131313;
+  background-color: black;
   width: 100%;
   height: 100%;
   opacity: 0.65;
   text-align: center;
   padding-top: 200px;
+  color: white;
+}
+.bartender-video iframe {
+  height: 550px;
 }
 
+@media screen and (max-width: 768px) {
+  .contenedor-general-tragos .cuarta-seccion-tragos {
+    width: 75%;
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .contenedor-general-tragos .silver {
+    width: 100%;
+    background-image: url(img/Barra-tragos/silver.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .contenedor-general-tragos .silver p {
+    text-align: center;
+    padding-top: 25px;
+    color: black;
+    font-family: "Bellefair", serif;
+    font-size: 18px;
+    line-height: 2;
+  }
+  .contenedor-general-tragos .silver hr {
+    width: 75%;
+    margin: auto;
+    border: solid 2px black;
+  }
+  .contenedor-general-tragos .black {
+    width: 100%;
+    background-image: url(img/Barra-tragos/blackjpg.jpg);
+    height: 250px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .contenedor-general-tragos .black p {
+    text-align: center;
+    padding-top: 25px;
+    font-family: "Bellefair", serif;
+    font-size: 18px;
+    line-height: 2;
+    color: white;
+  }
+  .contenedor-general-tragos .black hr {
+    width: 75%;
+    margin: auto;
+    border: solid 2px white;
+  }
+  .contenedor-general-tragos .gold {
+    width: 100%;
+    background-image: url(img/Barra-tragos/gold..jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .contenedor-general-tragos .gold p {
+    text-align: center;
+    padding-top: 25px;
+    color: black;
+    font-family: "Bellefair", serif;
+    font-size: 18px;
+    line-height: 2;
+  }
+  .contenedor-general-tragos .gold hr {
+    width: 75%;
+    margin: auto;
+    border: solid 2px black;
+  }
+  .contenedor-general-tragos .bronze {
+    width: 100%;
+    background-image: url(img/Barra-tragos/bronzee.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .contenedor-general-tragos .bronze p {
+    text-align: center;
+    padding-top: 25px;
+    font-family: "Bellefair", serif;
+    font-size: 18px;
+    line-height: 2;
+    color: black;
+  }
+  .contenedor-general-tragos .bronze hr {
+    width: 75%;
+    margin: auto;
+    border: solid 2px black;
+  }
+}
 /*tercera seccion tragos*/
 .tercera-seccion-tragos {
-  background-color: #131313;
+  background-color: black;
 }
 .tercera-seccion-tragos p {
   text-align: center;
-  font-family: "Alumni Sans", sans-serif;
-  font-size: 26px;
-  color: rgb(104, 103, 103);
+  font-family: "Bellefair", serif;
+  font-size: 22px;
+  color: rgb(167, 167, 167);
+  margin-top: 50px;
 }
 .tercera-seccion-tragos hr {
   color: white;
@@ -565,11 +1067,10 @@ form .formulario .boton {
 .silver p {
   text-align: center;
   padding-top: 50px;
-  color: #131313;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 15px;
+  color: black;
+  font-family: "Bellefair", serif;
+  font-size: 18px;
   line-height: 2;
-  font-weight: bolder;
 }
 .silver hr {
   width: 75%;
@@ -588,10 +1089,10 @@ form .formulario .boton {
 .black p {
   text-align: center;
   padding-top: 50px;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 15px;
+  font-family: "Bellefair", serif;
+  font-size: 18px;
   line-height: 2;
-  font-weight: bolder;
+  color: white;
 }
 .black hr {
   width: 75%;
@@ -609,11 +1110,10 @@ form .formulario .boton {
 .gold p {
   text-align: center;
   padding-top: 50px;
-  color: #131313;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 15px;
+  color: black;
+  font-family: "Bellefair", serif;
+  font-size: 18px;
   line-height: 2;
-  font-weight: bolder;
 }
 .gold hr {
   width: 75%;
@@ -631,10 +1131,10 @@ form .formulario .boton {
 .bronze p {
   text-align: center;
   padding-top: 50px;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 15px;
+  font-family: "Bellefair", serif;
+  font-size: 18px;
   line-height: 2;
-  font-weight: bolder;
+  color: black;
 }
 .bronze hr {
   width: 75%;
@@ -650,32 +1150,135 @@ form .formulario .boton {
 }
 .fondo-bodegas p {
   text-align: center;
-  color: white;
+  color: rgb(206, 111, 44);
   position: relative;
   top: 50px;
-  font-family: "Saira Extra Condensed", sans-serif;
-  font-size: 35px;
+  font-family: "Big Shoulders Stencil Text";
+  font-size: 45px;
 }
 .fondo-bodegas .elegi P {
   font-family: "Mr Dafoe", cursive;
   font-size: 30px;
+  color: white;
 }
 .fondo-bodegas .elegi .vinos p {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Bellefair", serif;
   font-size: 20px;
 }
 
-.titulo-galeria p {
-  color: #131313;
+@media screen and (max-width: 768px) {
+  .fondo-bodegas p {
+    font-size: 30px;
+  }
+  .fondo-bodegas .elegi p {
+    font-size: 25px;
+  }
+}
+/*comienza la pagina Galeria de imagenes*/
+.portada-imagenes {
+  background-image: url(img/pexels-rosario-fernandes-3835638.jpg);
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portada-imagenes .logo {
+  width: 100px;
+  height: 80px;
+}
+.portada-imagenes nav {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  opacity: 0.8;
+}
+.portada-imagenes nav .enlace {
+  position: absolute;
+  padding: 10px 40px;
+}
+.portada-imagenes nav ul {
+  float: right;
+  margin-right: 20px;
+}
+.portada-imagenes nav li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 5px;
+}
+.portada-imagenes nav a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 7px 13px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+}
+.portada-imagenes nav a.active,
+.portada-imagenes nav a:hover {
+  color: rgb(206, 111, 44);
+}
+.portada-imagenes .checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.portada-imagenes #check {
+  display: none;
 }
 
+@media screen and (max-width: 952px) {
+  .portada-imagenes nav ul li a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portada-imagenes nav {
+    background-color: white;
+    opacity: 1;
+  }
+  .portada-imagenes nav .checkbtn {
+    display: block;
+    color: black;
+  }
+  .portada-imagenes nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+  }
+  .portada-imagenes nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .portada-imagenes nav ul a {
+    font-size: 20px;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+  }
+  .portada-imagenes nav ul a:hover,
+.portada-imagenes nav ul a.active {
+    background: none;
+    color: rgb(206, 111, 44);
+  }
+  .portada-imagenes nav #check:checked ~ ul {
+    left: 0;
+  }
+}
 .galeria-funes img {
   width: 100%;
   height: 250px;
   padding: 5px;
 }
 
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .galeria-funes img {
     width: 100%;
     height: 400px;
@@ -695,33 +1298,78 @@ form .formulario .boton {
     padding: 10px;
   }
 }
+.funes {
+  width: 100%;
+  background-color: black;
+}
 .funes p {
-  color: #131313;
-  border-bottom: solid 1px black;
-  margin-left: 20px;
+  font-size: 40px;
+  font-family: "Big Shoulders Stencil Text";
+  color: rgb(206, 111, 44);
 }
 
+.rosario {
+  width: 100%;
+  background-color: black;
+}
 .rosario p {
-  color: #131313;
-  border-bottom: solid 1px black;
-  margin-left: 20px;
-  margin-top: 100px;
+  font-size: 40px;
+  font-family: "Big Shoulders Stencil Text";
+  color: rgb(206, 111, 44);
 }
 
 .titulo-funes-mapa p, .titulo-rosario-mapa p {
-  color: #131313;
+  color: black;
+  font-family: "Bellefair", serif;
+  margin-top: 50px;
+  font-size: 45px;
+  font-family: "Mr Dafoe", cursive;
 }
 
+.caja-funes-mapa {
+  background-color: rgb(238, 238, 238);
+}
 .caja-funes-mapa p {
-  color: white;
+  color: black;
   line-height: 2;
   padding: 20px;
+  padding-top: 150px;
   text-align: center;
+  font-family: "Bellefair", serif;
 }
 
-.caja-rosario-mapa p {
-  color: white;
+.caja-rosario-mapa {
+  background-color: rgb(238, 238, 238);
 }
-.caja-rosario-mapa .caja-texto-rosario-mapa {
-  background-color: #131313;
+.caja-rosario-mapa p {
+  color: black;
+  line-height: 2;
+  padding: 20px;
+  padding-top: 150px;
+  text-align: center;
+  font-family: "Bellefair", serif;
+}
+
+@media screen and (max-width: 768px) {
+  .caja-funes-mapa {
+    background-color: rgb(238, 238, 238);
+  }
+  .caja-funes-mapa p {
+    color: black;
+    line-height: 2;
+    padding: 20px;
+    text-align: center;
+    font-family: "Bellefair", serif;
+  }
+
+  .caja-rosario-mapa {
+    background-color: rgb(238, 238, 238);
+  }
+  .caja-rosario-mapa p {
+    color: black;
+    line-height: 2;
+    padding: 20px;
+    text-align: center;
+    font-family: "Bellefair", serif;
+  }
 }/*# sourceMappingURL=style.css.map */
