@@ -516,7 +516,6 @@ form .formulario textarea {
     margin-top: 170px;
     font-size: 50px;
   }
-
   .titulo-platos .platos h2 {
     font-size: 40px;
   }
@@ -929,6 +928,14 @@ form .formulario textarea {
   height: 550px;
 }
 
+@media screen and (max-width: 568px) {
+  .bartender-video .img-bartender {
+    background-image: url(img/Barra-tragos/bartender-mobile.jpg);
+    height: 110vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 @media screen and (max-width: 768px) {
   .contenedor-general-tragos .cuarta-seccion-tragos {
     width: 75%;
@@ -1038,10 +1045,9 @@ form .formulario textarea {
 .contenedor-general-tragos {
   background-image: url(img/Barra-tragos/foto-4seccion.jpg);
   height: 100%;
-  width: 100%;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .cuarta-seccion-tragos {
@@ -1161,6 +1167,9 @@ form .formulario textarea {
 }
 
 @media screen and (max-width: 768px) {
+  .fondo-bodegas {
+    background-image: url(img/Barra-tragos/foto-fondo-bodegas-mobile.jpg);
+  }
   .fondo-bodegas p {
     font-size: 30px;
   }
@@ -1355,7 +1364,6 @@ form .formulario textarea {
     text-align: center;
     font-family: "Bellefair", serif;
   }
-
   .caja-rosario-mapa {
     background-color: rgb(238, 238, 238);
   }
