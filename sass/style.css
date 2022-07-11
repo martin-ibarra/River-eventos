@@ -216,27 +216,21 @@ footer .volver a {
 }
 
 /*segunda seccion index*/
-.segunda-seccion .caja-rosario, .segunda-seccion .caja-funes {
+.segunda-seccion {
   background-color: rgb(238, 238, 238);
-  width: 50%;
-  float: left;
-  height: 100%;
 }
-.segunda-seccion .caja-rosario h4, .segunda-seccion .caja-funes h4 {
-  text-align: center;
+.segunda-seccion h4 {
   font-family: "Big Shoulders Stencil Text";
-  font-weight: bolder;
-  padding-top: 50px;
-  color: rgb(206, 111, 44);
   font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bolder;
 }
-.segunda-seccion .caja-rosario p, .segunda-seccion .caja-funes p {
-  line-height: 2;
-  padding: 20px 30px;
-  font-family: "Bellefair", serif;
-  color: #131313;
-  font-size: 20px;
+.segunda-seccion p {
+  padding: 30px;
+  line-height: 1.5;
 }
+
 /*tercera seccion index*/
 .tercera-seccion {
   background-image: url(img/Rio/Rio\ parana.jpg);
@@ -411,7 +405,7 @@ form .formulario textarea {
 /*armado de html Catering*/
 /*portada pagina catering*/
 .portada-catering {
-  background-image: url(img/Lot\ of\ appetizer\ plates\ containing\ dish\,\ meal\,\ and\ table.jpg);
+  background-image: url(img/Catering/portada-catering.jpg);
   background-position: center;
   height: 100vh;
   background-repeat: no-repeat;
@@ -777,7 +771,7 @@ form .formulario textarea {
 /*portada*/
 /*menu de la pagina barra de tragos*/
 .portada-tragos {
-  background-image: url(img/Barra-tragos/descarga.jpg);
+  background-image: url(img/Barra-tragos/portada-tragos.jpg);
   background-position: center;
   height: 120vh;
   background-repeat: no-repeat;
@@ -1176,7 +1170,7 @@ form .formulario textarea {
 }
 /*comienza la pagina Galeria de imagenes*/
 .portada-imagenes {
-  background-image: url(img/pexels-rosario-fernandes-3835638.jpg);
+  background-image: url(img/imagenes/portada-imagenes.jpg);
   background-position: center;
   height: 100vh;
   background-repeat: no-repeat;

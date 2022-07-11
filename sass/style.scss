@@ -82,41 +82,26 @@ $h3-sec-1: (
 }
 
 /*segunda seccion index*/
-
 .segunda-seccion {
-    .caja-rosario {
-        background-color: $color-secundario;
+    background-color: $color-secundario;
 
-        width: 50%;
-        float: left;
-        height: 100%;
+    h4 {
+        font-family: $titulos-parrafos;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 20px;
+        font-weight: bolder;
 
-
-
-        h4 {
-            text-align: center;
-            font-family: $titulos-parrafos;
-            font-weight: bolder;
-            padding-top: 50px;
-            color: rgb(206, 111, 44);
-            font-size: 30px;
-        }
-
-        p {
-            line-height: 2;
-            padding: 20px 30px;
-            font-family: $parrafo-general;
-            color: #131313;
-            font-size: 20px;
-
-        }
     }
 
-    .caja-funes {
-        @extend.caja-rosario;
-
+    p {
+        padding: 30px;
+        line-height: 1.5;
     }
 }
+
+
+
 
 /*tercera seccion index*/
 
@@ -367,7 +352,7 @@ form {
 /*portada pagina catering*/
 
 .portada-catering {
-    background-image: url(img/Lot\ of\ appetizer\ plates\ containing\ dish\,\ meal\,\ and\ table.jpg);
+    background-image: url(img/Catering/portada-catering.jpg);
     background-position: center;
     height: 100vh;
     background-repeat: no-repeat;
@@ -857,7 +842,7 @@ form {
 /*portada*/
 /*menu de la pagina barra de tragos*/
 .portada-tragos {
-    background-image: url(img/Barra-tragos/descarga.jpg);
+    background-image: url(img/Barra-tragos/portada-tragos.jpg);
     background-position: center;
     height: 120vh;
     background-repeat: no-repeat;
@@ -1391,7 +1376,7 @@ form {
 
 /*comienza la pagina Galeria de imagenes*/
 .portada-imagenes {
-    background-image: url(img/pexels-rosario-fernandes-3835638.jpg);
+    background-image: url(img/imagenes/portada-imagenes.jpg);
     background-position: center;
     height: 100vh;
     background-repeat: no-repeat;
