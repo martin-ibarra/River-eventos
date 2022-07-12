@@ -930,7 +930,7 @@ form .formulario textarea {
 
 @media screen and (max-width: 480px) {
   .bartender-video .img-bartender {
-    background-image: url(img/Barra-tragos/bartender-mobile.jpg);
+    background-image: url(img/Barra-tragos/bartender-mobile1.jpg);
     height: 110vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -953,9 +953,6 @@ form .formulario textarea {
 }
 
 @media screen and (max-width: 768px) {
-  .contenedor-general-tragos {
-    background-color: aqua;
-  }
   .contenedor-general-tragos .cuarta-seccion-tragos {
     width: 75%;
     margin: auto;
@@ -1042,15 +1039,6 @@ form .formulario textarea {
     width: 75%;
     margin: auto;
     border: solid 2px black;
-  }
-}
-@media screen and (max-width: 480px) {
-  .contenedor-general-tragos {
-    background-image: url(img/Barra-tragos/foto-4seccion-mobile.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
   }
 }
 /*Cuarta seccion tragos*/
