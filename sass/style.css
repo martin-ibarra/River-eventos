@@ -928,7 +928,7 @@ form .formulario textarea {
   height: 550px;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 480px) {
   .bartender-video .img-bartender {
     background-image: url(img/Barra-tragos/bartender-mobile.jpg);
     height: 110vh;
@@ -936,7 +936,26 @@ form .formulario textarea {
     background-size: cover;
   }
 }
+.tercera-seccion-tragos {
+  background-color: black;
+}
+.tercera-seccion-tragos p {
+  text-align: center;
+  font-family: "Bellefair", serif;
+  font-size: 22px;
+  color: rgb(167, 167, 167);
+  margin-top: 50px;
+}
+.tercera-seccion-tragos hr {
+  color: white;
+  width: 50%;
+  margin: auto;
+}
+
 @media screen and (max-width: 768px) {
+  .contenedor-general-tragos {
+    background-color: aqua;
+  }
   .contenedor-general-tragos .cuarta-seccion-tragos {
     width: 75%;
     margin: auto;
@@ -1025,23 +1044,16 @@ form .formulario textarea {
     border: solid 2px black;
   }
 }
-/*tercera seccion tragos*/
-.tercera-seccion-tragos {
-  background-color: black;
+@media screen and (max-width: 480px) {
+  .contenedor-general-tragos {
+    background-image: url(img/Barra-tragos/foto-4seccion-mobile.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
-.tercera-seccion-tragos p {
-  text-align: center;
-  font-family: "Bellefair", serif;
-  font-size: 22px;
-  color: rgb(167, 167, 167);
-  margin-top: 50px;
-}
-.tercera-seccion-tragos hr {
-  color: white;
-  width: 50%;
-  margin: auto;
-}
-
+/*Cuarta seccion tragos*/
 .contenedor-general-tragos {
   background-image: url(img/Barra-tragos/foto-4seccion.jpg);
   height: 100%;
@@ -1166,6 +1178,13 @@ form .formulario textarea {
   font-size: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .fondo-bodegas {
+    background-image: url(img/Barra-tragos/foto-fondo-bodegas-mobile.jpg);
+    background-size: cover;
+    height: 100vh;
+  }
+}
 @media screen and (max-width: 768px) {
   .fondo-bodegas {
     background-image: url(img/Barra-tragos/foto-fondo-bodegas-mobile.jpg);

@@ -1068,7 +1068,7 @@ form {
     }
 }
 
-@media screen and(max-width:568px) {
+@media screen and(max-width:480px) {
     .bartender-video {
         .img-bartender {
             background-image: url(img/Barra-tragos/bartender-mobile.jpg);
@@ -1081,9 +1081,29 @@ form {
 
 }
 
+.tercera-seccion-tragos {
+    background-color: black;
+
+    p {
+        text-align: center;
+        font-family: $parrafo-general;
+        font-size: 22px;
+        color: rgb(167, 167, 167);
+        margin-top: 50px;
+
+    }
+
+    hr {
+        color: white;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+
 @media screen and(max-width:768px) {
     .contenedor-general-tragos {
-
+        background-color: aqua;
 
         .cuarta-seccion-tragos {
 
@@ -1200,25 +1220,22 @@ form {
     }
 }
 
-/*tercera seccion tragos*/
-.tercera-seccion-tragos {
-    background-color: black;
 
-    p {
-        text-align: center;
-        font-family: $parrafo-general;
-        font-size: 22px;
-        color: rgb(167, 167, 167);
-        margin-top: 50px;
 
-    }
+@media screen and(max-width:480px) {
+    .contenedor-general-tragos {
+        background-image: url(img/Barra-tragos/foto-4seccion-mobile.jpg);
+        height: 100%;
 
-    hr {
-        color: white;
-        width: 50%;
-        margin: auto;
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+        background-size: cover;
     }
 }
+
+/*Cuarta seccion tragos*/
+
 
 .contenedor-general-tragos {
     background-image: url(img/Barra-tragos/foto-4seccion.jpg);
@@ -1376,6 +1393,15 @@ form {
     }
 
 }
+
+@media screen and(max-width:480px) {
+    .fondo-bodegas {
+        background-image: url(img/Barra-tragos/foto-fondo-bodegas-mobile.jpg);
+        background-size: cover;
+        height: 100vh;
+    }
+}
+
 
 @media screen and(max-width:768px) {
     .fondo-bodegas {
